@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Happy Birthday Teacher</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#ffdde1,#ee9ca7,#fbc2eb);
+      overflow-x:hidden;
+      color:white;
+      text-align:center;
+    }
+
+    /* Floating Hearts */
+    .heart{
+      position:fixed;
+      bottom:-20px;
+      color:rgba(255,255,255,0.7);
+      animation: float 8s linear infinite;
+      z-index:1;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    .container{
+      position:relative;
+      z-index:2;
+      padding:40px 20px;
+    }
+
+    .title{
+      font-size:4rem;
+      font-weight:700;
+      margin-top:20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow{
+      from{
+        text-shadow:0 0 10px white;
+      }
+      to{
+        text-shadow:0 0 25px #fff,0 0 40px #ff69b4;
+      }
+    }
+
+    .subtitle{
+      font-size:1.3rem;
+      margin-top:15px;
+      opacity:0.95;
+    }
+
+    .teacher-img{
+      width:260px;
+      height:260px;
+      object-fit:cover;
+      border-radius:50%;
+      margin-top:35px;
+      border:8px solid rgba(255,255,255,0.5);
+      box-shadow:0 0 30px rgba(255,255,255,0.7);
+      animation: zoom 4s infinite alternate;
+    }
+
+    @keyframes zoom{
+      from{
+        transform:scale(1);
+      }
+      to{
+        transform:scale(1.06);
+      }
+    }
+
+    .message-box{
+      max-width:800px;
+      margin:40px auto;
+      background:rgba(255,255,255,0.15);
+      padding:35px;
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 8px 30px rgba(0,0,0,0.2);
+      animation: fadeUp 2s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .message-box h2{
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    .message-box p{
+      line-height:1.9;
+      font-size:1.1rem;
+    }
+
+    .gallery{
+      margin-top:60px;
+    }
+
+    .gallery h2{
+      margin-bottom:25px;
+      font-size:2.3rem;
+    }
+
+    .gallery-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .gallery-container img{
+      width:250px;
+      height:300px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.5s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .gallery-container img:hover{
+      transform:scale(1.08) rotate(2deg);
+    }
+
+    .footer{
+      margin-top:70px;
+      padding-bottom:30px;
+      font-size:1rem;
+      opacity:0.9;
+    }
+
+    .music-btn{
+      margin-top:30px;
+      padding:14px 28px;
+      border:none;
+      border-radius:40px;
+      background:white;
+      color:#ff4f81;
+      font-size:1rem;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.4s;
+    }
+
+    .music-btn:hover{
+      transform:scale(1.08);
+      background:#ff4f81;
+      color:white;
+    }
+
+    @media(max-width:768px){
+
+      .title{
+        font-size:2.5rem;
+      }
+
+      .teacher-img{
+        width:200px;
+        height:200px;
+      }
+
+      .message-box{
+        padding:25px;
+      }
+
+      .gallery-container img{
+        width:90%;
+        height:auto;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <script>
+    for(let i=0;i<40;i++){
+      let heart=document.createElement("div");
+      heart.className="heart";
+      heart.innerHTML="❤";
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.fontSize=(Math.random()*20+10)+"px";
+      heart.style.animationDuration=(Math.random()*5+5)+"s";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="container">
+
+    <h1 class="title">Happy Birthday</h1>
+
+    <p class="subtitle">
+      A small surprise made with love and gratitude 
+    </p>
+
+    <!-- Teacher Photo -->
+    <img src="IMG_20251015_195005.jpg" alt="Teacher Photo" class="teacher-img">
+
+
+    <!-- Beautiful Message -->
+    <div class="message-box">
+
+      <h2>To the most amazing person</h2>
+
+      <p>
+        On your special day, I just want to say thank you for being
+        such an amazing teacher and a wonderful human being.
+        <br><br>
+
+        Your guidance, encouragement and patience  inspire us every day.
+        You don’t just teach subjects — you teach confidence, discipline,
+        and the importance of believing in ourselves.
+        <br><br>
+
+        May your life always be filled with happiness, peace,
+        good health, and countless beautiful moments.
+        <br><br>
+
+        Happy Birthday to the best teacher.
+        You are truly special and unforgettable.
+      </p>
+
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+      <h2>Beautiful Memories</h2>
+
+      <div class="gallery-container">
+
+        <!-- Replace these images -->
+        <img src="IMG_20251015_195005.jpg" alt="">
+        <img src="/IMG-20251015-WA0005.jpg" alt="">
+        <img src="/IMG-20251015-WA0006.jpg" alt="">
+        <img src="pic4.jpg" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Made with respect and gratitude by Sanya
+    </div>
+
+  </div>
+
+  <script>
+
+    function playMusic(){
+      document.getElementById("music").play();
+    }
+
+  </script>
+
+</body>
+</html>
